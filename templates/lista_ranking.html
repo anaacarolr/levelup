@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<table>
+    <thead class="ranking">
+        <tr>
+            <th>OS MAIS AMADOS!!</th>
+        </tr>
+    </thead>
+    <tbody class="rankjogo">
+        {% for jogo in jogos %}
+        <tr>
+            <td>
+                <a href="{{ url_for('get_ver_jogo', jogo_id=jogo.id) }}">{{ loop.index }}. {{ jogo.nome_jogo }}</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock conteudo %}

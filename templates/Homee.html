@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<div class="cards">
+    {% for home in homes %}
+
+    <div class="card-receita">
+        <div class="img-receita">
+            <img src="{{ receita.url_img }}">
+        </div>
+        <h3>{{.titulo}}</h3>
+        <h3 class="dificuldadeM">Dificuldade: {{receita.dificuldade}}</h3>
+
+    </div>
+
+    {% endfor %}
+</div>
+
+{% endblock conteudo %}

@@ -1,0 +1,19 @@
+table,th, td, thead{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 50px;
+    background-color: #522177;
+    color: white;
+
+}
+
+table, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    background-color: #a167cc;
+    text-align: center;
+    color: #f3ebff;
+    height: 50px;
+    background:linear-gradient(#6c3598, #a167cc) ;
+}

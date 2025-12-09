@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="jogo">
+    {% for j , c in ver_jogo %}
+
+    <h3 class="game">
+        <span class="rotulo">NOME:</span>
+        <span class="valor">{{ j.nome_jogo }}</span>
+
+        <span class="fav" data-id="{{ j.id }}">★</span>
+    </h3>
+    <h3 class="game">
+        <span class="rotulo">CATEGORIA:</span>
+        <span class="valor">{{c.nome}}</span>
+    </h3>
+    <h3 class="game">
+        <span class="rotulo">DESCRIÇÃO:</span>
+        <span class="valor">{{j.descricao_jogo}}</span>
+    </h3>
+    <h3 class="game">
+        <span class="rotulo">DATA DE LANÇAMENTO:</span>
+        <span class="valor">{{j.data_de_criacao}}</span>
+    </h3>
+    <h3 class="game">
+        <span class="rotulo">QUANTIDADE DE PLAYERS:</span>
+        <span class="valor">{{j.n_players}}</span>
+    </h3>
+    <h3 class="game">
+        <span class="rotulo">FREE OU PAGO:</span>
+        <span class="valor">{{j.jogo_free_ou_pago}}</span>
+    </h3>
+    <h3 class="game">
+        <span class="rotulo">CLASSIFICAÇÃO:</span>
+        <span class="valor">{{j.clasificacao}}</span>
+    </h3>
+    {% endfor%}
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".fav").forEach(icon => {
+        const jogoId = icon.dataset.id;
+
+        // Verifica se o jogo já está favoritado no localStorage
+        if(localStorage.getItem(`fav-${jogoId}`) === "true"){
+            icon.classList.add("ativo");
+        }
+
+        icon.addEventListener("click", function () {
+            this.classList.toggle("ativo");
+            // Salva ou remove do localStorage
+            if(this.classList.contains("ativo")){
+                localStorage.setItem(`fav-${jogoId}`, "true");
+            } else {
+                localStorage.removeItem(`fav-${jogoId}`);
+            }
+        });
+    });
+});
+</script>
+{% endblock conteudo %}
+

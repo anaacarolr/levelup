@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LevelUP</title>
+    <link rel="stylesheet" href="/static/home.css">
+    <!--    <link rel="stylesheet" href="/static/categoria.css">-->
+    <!--    <link rel="stylesheet"href="/static/formulario_jog.css">-->
+</head>
+<body>
+<div class="header">
+    <img src="/static/LevelUP%20(1)%20(1).png" width="80px" height="80px" class="levelupimg">
+    <div class="ajuda">
+        <ul>
+            <li>
+                <a href="{{url_for('post_usuario')}}">USUÁRIO</a>
+            </li>
+        </ul>
+        <img src="/static/user%20(1).png" width="40px" height="40px">
+    </div>
+</div>
+<div class="separar">
+    <div class="navegation">
+        <ul>
+            <li class="home">
+                <a href="{{url_for('get_jogos')}}">HOME</a>
+            </li>
+            <li class="home">
+                <a href="{{url_for('get_categoria')}}">CATEGORIAS</a>
+            </li>
+            <li class="home">
+                <a href="{{url_for('post_jogos')}}">ADD JOGO</a>
+            </li>
+            <li class="home">
+                <a href="{{url_for('post_categoria')}}">ADD CATEGORIA</a>
+            </li>
+            <li class="home">
+                <a href="{{url_for('lista_ranking')}}">RANKING DOS JOGOS</a>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+
+        {% block conteudo %}
+        {% endblock conteudo %}
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'base.html'  %}
+
+{% block conteudo  %}
+{%- for mensagem in get_flashed_messages()%}
+{{mensagem}}
+{% endfor%}
+
+<div class="categoria-formulario-pessoa">
+    <form method="POST" action="{{url_for('post_usuario')}}">
+        <label>
+            Nome do Usuario:<br>
+            <input type="text" name="form_nome_usuario">
+        </label><br>
+        <div>
+            <label for="data_criacao_pessoa">Data de nascimento:</label>
+            <input type="date" id="data_criacao_pessoa" name="form_data_de_nascimento">
+        </div>
+        <br>
+        <label>
+            E-mail:
+            <input type="text" name="form_email">
+        </label><br>
+        <label>
+            Senha:
+            <input type="password" name="form_senha">
+        </label><br>
+
+        <button type="submit">
+            SALVAR
+        </button>
+    </form>
+</div>
+
+
+{% endblock conteudo %}

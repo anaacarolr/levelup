@@ -1,0 +1,652 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1d0738;
+}
+
+
+.header {
+    display: flex;
+    height: 80px;
+    background: linear-gradient(90deg, #380b49, #2d0c56);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegation {
+    display: flex;
+    height: calc(100vh - 83px);
+    width: 15%;
+    background-color: #380b49;
+}
+
+.conta-usuario {
+    font-family: Verdana;
+    display: inline-block;
+    font-size: 2em;
+    color: #ffffff;
+    padding: 20px;
+    text-align: left;
+
+}
+
+.ajuda {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+li {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    margin: 2px;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+li a {
+    text-decoration: none;
+    color: #F0F0F0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+li:hover {
+    background-color: rgba(187, 134, 252, 0.1);
+}
+
+li:hover a {
+    color: #BB86FC;
+}
+
+li.active {
+    background-color: #BB86FC;
+}
+
+li.active a {
+    color: #1A052E;
+    font-weight: 700;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    gap: 10px;
+    margin: 0 10px 0 10px;
+    flex-wrap: wrap;
+}
+
+.main {
+    display: flex;
+    height: calc(104vh - 150px);
+    background-color: #1d0738;
+    width: 100%;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.separar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: calc(100vh - 83px);
+}
+
+.dificuldadeF {
+    display: flex;
+    font-family: Arial;
+    color: white;
+}
+
+.dificuldadeM {
+    display: flex;
+    font-family: Arial;
+    color: white;
+}
+
+
+.card-jogo-top {
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-jogo-top:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(187, 134, 252, 0.4);
+    cursor: pointer;
+}
+
+.card-jogo-top a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.img {
+    border-radius: 30px;
+    height: 180px;
+    width: 300px;
+
+}
+
+.jogos {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+/*Principal do Jogo */
+.jogo {
+    display: flex;
+    background: linear-gradient(135deg, #1A052E, #2A0A4B);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    color: #E0E0E0;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    width: 950px;
+    min-height: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.jogo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+h3.game {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+.rotulo {
+    font-weight: 600;
+    color: #BB86FC;
+    min-width: 220px;
+    margin-right: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.valor {
+    font-weight: 300;
+    color: #F0F0F0;
+    flex-grow: 1;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+h3.game:nth-child(3) .valor {
+    font-style: italic;
+    color: #CCCCCC;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+table {
+    width: 80%;
+    margin: 60px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #380B49;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: #E0E0E0;
+}
+
+.categorias-exibir {
+    background-color: #4B0082;
+    color: #fbfafc;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.categorias-exibir th {
+    padding: 20px 25px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.categoria-exibir-nome td {
+    padding: 15px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1em;
+    font-weight: 300;
+    color: #F0F0F0;
+
+}
+
+
+.categoria-exibir-nome tr {
+    transition: background-color 0.3s ease;
+}
+
+.categoria-exibir-nome tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.categoria-exibir-nome tr:last-child td {
+    border-bottom: none;
+}
+
+.categoria-formulario {
+    margin: 100px auto;
+    width: 450px;
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #1A052E, #2A0A4B);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #F0F0F0;
+}
+
+.categoria-formulario label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #BB86FC;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.categoria-formulario input[type="text"] {
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #F0F0F0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.categoria-formulario input[type="text"]:focus {
+    outline: none;
+    border-color: #BB86FC;
+    box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.3);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.categoria-formulario button[type="submit"] {
+    width: 150px;
+    padding: 12px 0;
+    background-color: #BB86FC;
+    color: #1A052E;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.categoria-formulario button[type="submit"]:hover {
+    background-color: #9C5FFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    width: 350px;
+    height: 40px;
+    border-radius: 50px;
+    border: 0;
+    outline-color: white;
+    background: #480f5e;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.botao {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    font-family: Bahnschrift;
+
+    height: 180px;
+    margin: 30px;
+    border-radius: 33px;
+}
+
+.card-jogo-top {
+    background-color: #ad5dee;
+    width: 300px;
+    height: 180px;
+    margin: 30px;
+    border-radius: 33px;
+}
+
+.img:hover {
+    border: 3px solid white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+.levelupimg {
+    margin: 50px;
+}
+
+
+.nomeee-jogo {
+    font-family: avenir;
+}
+
+.formulario-add-jogo {
+    width: 600px;
+    margin: 60px auto;
+    padding: 40px 50px;
+    background: linear-gradient(135deg, #1A052E, #2A0A4B);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;;
+}
+
+.formulario-add-jogo label {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #BB86FC;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.formulario-add-jogo input[type="text"],
+.formulario-add-jogo input[type="url"],
+.formulario-add-jogo input[type="date"],
+.formulario-add-jogo textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #F0F0F0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.formulario-add-jogo input::placeholder,
+.formulario-add-jogo textarea::placeholder {
+    color: #A0A0A0;
+    font-weight: 300;
+}
+
+
+.formulario-add-jogo input:focus,
+.formulario-add-jogo textarea:focus {
+    outline: none;
+    border-color: #BB86FC;
+    box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.3);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.formulario-add-jogo textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.formulario-add-jogo select {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #F0F0F0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F0F0F0'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.formulario-add-jogo select:focus {
+    outline: none;
+    border-color: #BB86FC;
+    box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.3);
+}
+
+.formulario-add-jogo button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.formulario-add-jogo button[type="submit"] {
+    background-color: #BB86FC;
+    color: #1A052E;
+    margin-top: 20px;
+}
+
+.formulario-add-jogo button[type="submit"]:hover {
+    background-color: #9C5FFF;
+    transform: translateY(-2px);
+}
+
+.formulario-add-jogo button.limpar {
+    background-color: #380B49;
+    color: #BB86FC;
+    border: 1px solid #BB86FC;
+    margin-top: 10px;
+}
+
+.formulario-add-jogo button.limpar:hover {
+    background-color: #2A0A4B;
+    transform: translateY(-2px);
+    color: #F0F0F0;
+}
+
+.categoria-formulario-pessoa {
+    width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #1A052E, #2A0A4B);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #F0F0F0;
+}
+
+.categoria-formulario-pessoa label {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: left;
+    font-size: 1.0em;
+    font-weight: 600;
+    color: #BB86FC;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.categoria-formulario-pessoa input[type="text"],
+.categoria-formulario-pessoa input[type="email"],
+.categoria-formulario-pessoa input[type="password"],
+.categoria-formulario-pessoa input[type="date"] {
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #F0F0F0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.categoria-formulario-pessoa input:focus {
+    outline: none;
+    border-color: #BB86FC;
+    box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.3);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.categoria-formulario-pessoa button[type="submit"] {
+    width: 180px;
+    padding: 12px 0;
+    margin-top: 30px;
+    background-color: #BB86FC;
+    color: #1A052E;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05em;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.categoria-formulario-pessoa button[type="submit"]:hover {
+    background-color: #9C5FFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 1º lugar (primeiro <tr> com jogo) */
+.rankjogo tr:nth-child(1) td a {
+    color: #DAA520; /* dourado */
+    font-weight: bold;
+}
+
+/* 2º lugar */
+.rankjogo tr:nth-child(2) td a {
+    color: #C0C0C0; /* prata */
+    font-weight: bold;
+}
+
+/* 3º lugar */
+.rankjogo tr:nth-child(3) td a {
+    color: #CD7F32; /* bronze */
+    font-weight: bold;
+}
+
+.ranking {
+    background-color: #4B0082;
+    color: #fbfafc;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.ranking th {
+    padding: 20px 25px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.rankjogo td {
+    padding: 15px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1em;
+    font-weight: 300;
+    color: #F0F0F0;
+}
+
+.rankjogo tr {
+    transition: background-color 0.3s ease;
+}
+
+.rankjogo tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.rankjogo tr:last-child td {
+    border-bottom: none;
+}
+
+.fav {
+    cursor: pointer;
+    color: gray;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+.fav.ativo {
+    color: gold;
+}

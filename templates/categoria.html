@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <table>
+        <thead class="categorias-exibir">
+        <tr>
+            <th> NOME DA CATEGORIA</th>
+        </tr>
+        </thead>
+        <tbody class="categoria-exibir-nome">
+        {% for categoria in categorias %}
+        <tr>
+            <td>{{categoria.nome}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock conteudo %}

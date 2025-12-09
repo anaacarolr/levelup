@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="formulario-add-jogo">
+    <form method="POST" action="{{ url_for('post_jogos')}}">
+        <div>
+            <label for="nome_jogo">Nome do jogo:</label>
+            <input type="text" id="nome_jogo" name="form_nome" placeholder="Nome do jogo" required><br>
+        </div><br>
+
+        <div>
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="form_categoria">
+                <optgroup label="categoria">
+                    {% for categoria in categorias %}
+                    <option value="{{categoria.id}}">{{categoria.nome}}</option>
+                    {% endfor %}
+                </optgroup>
+            </select>
+        </div><br>
+
+        <div>
+            <label for="classificacao">Classificação:</label>
+            <select id="classificacao" name="form_clasificacao">
+                <option value="livre">Livre</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+            </select>
+        </div><br>
+
+        <div>
+            <label for="players">Número de Players:</label>
+            <select id="players" name="form_players">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div><br>
+
+        <div>
+            <label for="custo">Custo:</label>
+            <select id="custo" name="form_jogo_free_ou_pago">
+                <option value="free">Free</option>
+                <option value="pago">Pago</option>
+            </select>
+        </div><br>
+
+        <div>
+            <label for="data_criacao">Data de criação:</label>
+            <input type="date" id="data_criacao" name="form_data">
+        </div><br>
+
+        <div>
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="form_descricao"
+                      placeholder="Escreva uma descrição detalhada do jogo..."></textarea>
+        </div><br>
+
+        <div>
+            <label for="url_imagem">URL da imagem:</label>
+            <input type="url" id="url_imagem" name="form_url_img" placeholder="https://example.com/imagem.jpg">
+        </div><br>
+
+        <button type="submit">Cadastrar</button>
+        <button type="reset" class="limpar">Limpar</button>
+    </form>
+</div>
+{% endblock conteudo %}

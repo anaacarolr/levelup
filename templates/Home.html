@@ -1,0 +1,16 @@
+{% extends 'base.html'  %}
+
+{% block conteudo  %}
+<div class="cards">
+
+    {% for jogo in jogos %}
+
+    <div class="card-jogo-top">
+        <a href="{{url_for('get_ver_jogo', jogo_id = jogo.id)}}" >
+            <div>        <img class="img" src="{{ jogo.url_img}}" alt="chat"></div></a>
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock conteudo %}
