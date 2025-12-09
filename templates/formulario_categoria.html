@@ -1,0 +1,21 @@
+{% extends 'base.html'  %}
+
+{% block conteudo  %}
+{%- for mensagem in get_flashed_messages()%}
+{{mensagem}}
+{% endfor%}
+
+<div class="categoria-formulario">
+    <form method="POST" action="{{url_for('post_categoria')}}">
+        <label>
+            Nome da categoria:<br>
+            <input type="text" name="form_nome_categoria">
+        </label><br>
+        <button type="submit">
+            SALVAR
+        </button>
+    </form>
+</div>
+
+
+{% endblock conteudo %}

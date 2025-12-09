@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1d0738;
+}
+
+
+.header {
+    display: flex;
+    height: 80px;
+    background: linear-gradient(90deg, #380b49, #2d0c56);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegation {
+    display: flex;
+    height: calc(100vh - 83px);
+    width: 15%;
+    background-color: #380b49;
+}
+
+.conta-usuario {
+    font-family: Verdana;
+    display: inline-block;
+    font-size: 2em;
+    color: #ffffff;
+    padding: 20px;
+    text-align: left;
+}
+
+.ajuda {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+
+li {
+    list-style: none;
+    font-family: Bahnschrift;
+    font-size: 1.5em;
+    margin: 10px;
+    color: white;
+}
+
+li {
+    list-style: none;
+    font-family: Bahnschrift;
+    font-size: 1.5em;
+    margin: 10px;
+    color: white;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    gap: 10px;
+    margin: 0 10px 0 10px;
+    flex-wrap: wrap;
+}
+
+.main {
+    display: flex;
+    height: calc(104vh - 150px);
+    background-color: #1d0738;
+    width: 100%;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.separar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: calc(100vh - 83px);
+}
+
+.dificuldadeF{
+    display: flex;
+    font-family: Arial;
+    color: white;
+}
+
+.dificuldadeM {
+    display: flex;
+    font-family: Arial;
+    color: white;
+}
+
+.jogos-top3 {
+    display: flex;
+    background: url("/static/minec.jpg") no-repeat center center;
+    width: 100%;
+    margin: 30px;
+    border-radius: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-jogo-top img {
+    height: 180px;
+    width: 300px;
+}
+
+.img {
+    border-radius: 30px;
+    height: 180px;
+    width: 300px;
+}
+
+.jogos {
+    display: flex;
+    flex-direction: column;
+}
+
+.jogo{
+    background-color: #ad5dee;
+    width: 900px;
+    height: 1600px;
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.card-jogo-top:hover {
+    border: white;
+}
+
+.categorias-exibir {
+    background-color: #380b49;
+    font-family: Verdana;
+    color: white;
+}
+
+.categoria-exibir-nome {
+    font-family: Arial;
+    font-size: large;
+    background-color: white;
+    color: #532579;
+}
+
+.categoria-formulario {
+    display: flex;
+    color: white;
+    button {
+    color: #f3ebff;
+    font-family: Georgia;
+    background: linear-gradient(#522177, #380b49);
+    border-radius: 100px;
+    border: 0;
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+    outline-color: white;}
+    font-family: Bahnschrift;
+    justify-content: center;
+    margin: 40px;
+}
+
+input{
+    width: 350px;
+    height: 40px;
+    border-radius: 50px;
+    border: 0;
+    outline-color: white;
+    background: #480f5e;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.botao {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    font-family: Bahnschrift;
+
+    height: 180px;
+    margin: 30px;
+    border-radius: 33px;
+}
+
+.card-jogo-top {
+    background-color: #46c9ff;
+    width: 300px;
+    height: 180px;
+    margin: 30px;
+    border-radius: 33px;
+}
+
+}
+li {
+    list-style: none;
+    font-family: Verdana;
+    font-size: 1.5em;
+    margin: 10px;
+    color: white;
+}
+
+.nomeee-jogo {
+    font-family: avenir;
+}
+
+.game {
+    font-family: Arial ;
+}
